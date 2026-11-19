@@ -103,7 +103,7 @@ export const ProjectCaseModal: React.FC<ProjectCaseModalProps> = ({
         </div>
 
         {/* Content body */}
-        <div className="p-4 p-md-5">
+        <div className="p-3 p-sm-4 p-md-5">
           <div className="mb-4">
             <h2 id="modal-project-title" className="h3 fw-bold mb-1">
               {project.title}
@@ -196,7 +196,7 @@ export const ProjectCaseModal: React.FC<ProjectCaseModalProps> = ({
             ))}
           </div>
 
-          <div className="d-flex flex-wrap align-items-center justify-content-between gap-3 pt-2">
+          <div className="d-flex flex-wrap align-items-center justify-content-between gap-3 pt-2 pf-modal-actions">
             <button
               type="button"
               className="pf-btn-primary"

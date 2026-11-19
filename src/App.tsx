@@ -367,7 +367,7 @@ export function App() {
                 </p>
 
                 {/* Primary & Secondary CTAs */}
-                <div className="d-flex flex-wrap align-items-center gap-3 mb-4 pb-2">
+                <div className="d-flex flex-wrap align-items-center gap-3 mb-4 pb-2 pf-hero-cta">
                   <a href="#proyectos" className="pf-btn-primary">
                     Explorar proyectos
                     <ArrowDown size={16} />
@@ -422,7 +422,7 @@ export function App() {
 
               {/* Right Column: Editorial Portrait with Interactive 3D Motion */}
               <div className="col-12 col-lg-5">
-                <figure className="m-0 mx-auto" style={{ maxWidth: "380px" }}>
+                <figure className="m-0 mx-auto pf-portrait-figure" style={{ maxWidth: "380px" }}>
                   <div
                     className="pf-portrait-frame"
                     onMouseEnter={() => setIsPortraitHovered(true)}
@@ -587,7 +587,7 @@ export function App() {
                 </p>
 
                 <div
-                  className="d-flex flex-column gap-2"
+                  className="d-flex flex-column gap-2 pf-skill-tabs-container"
                   role="tablist"
                   aria-label="Áreas de habilidad"
                 >
