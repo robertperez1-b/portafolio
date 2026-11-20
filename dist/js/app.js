@@ -601,22 +601,33 @@ function renderTimeline(containerId, items) {
 
 
 // ============================================================
-//  PORTRAIT 3D TILT
+//  PORTRAIT 3D TILT & MOVIMIENTO AUTÓNOMO
 // ============================================================
 function initPortraitTilt() {
   const frame = document.querySelector(".pf-portrait-frame");
   if (!frame) return;
 
-  frame.addEventListener("mouseenter", () => { state.isPortraitHovered = true; });
+  frame.addEventListener("mouseenter", () => {
+    state.isPortraitHovered = true;
+    frame.classList.add("pf-manual-tilt");
+  });
+
   frame.addEventListener("mousemove", (e) => {
     const rect = frame.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width - 0.5;
     const y = (e.clientY - rect.top) / rect.height - 0.5;
     frame.style.transform = `perspective(800px) rotateX(${-y * 20}deg) rotateY(${x * 20}deg) translateY(-8px) scale(1.02)`;
   });
+
   frame.addEventListener("mouseleave", () => {
     state.isPortraitHovered = false;
-    frame.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0) scale(1)";
+    frame.style.transform = "";
+    // Reanudar la animación de movimiento autónomo suavemente
+    setTimeout(() => {
+      if (!state.isPortraitHovered) {
+        frame.classList.remove("pf-manual-tilt");
+      }
+    }, 150);
   });
 }
 
