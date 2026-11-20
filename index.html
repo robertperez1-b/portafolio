@@ -84,9 +84,10 @@
       <!-- SECCIÓN: HERO DE PRESENTACIÓN -->
       <header class="pf-hero">
         <div class="container">
-          <div class="row align-items-center g-5">
+          <!-- Contenedor Responsivo Lado a Lado: La imagen NO baja en ningún dispositivo -->
+          <div class="pf-hero-layout">
             <!-- Columna Izquierda: Mensaje y Perfil -->
-            <div class="col-12 col-lg-7">
+            <div class="pf-hero-content">
               <div class="pf-status-pill">
                 <span class="pf-status-dot" aria-hidden="true"></span>
                 <span>Disponible para proyectos de desarrollo y soporte · 2026</span>
@@ -98,12 +99,12 @@
                 y orientadas a la experiencia del usuario.
               </h1>
 
-              <p class="pf-text-secondary mb-4" style="font-size: 1.06rem; max-width: 560px; line-height: 1.68;">
+              <p class="pf-text-secondary mb-4 pf-hero-bio">
                 Técnico Superior Universitario en Informática (UNETI) con experiencia sólida en JavaScript, Python y PHP. Especialista en arquitecturas con Laravel, interfaces responsivas con Bootstrap y Tailwind, administración de entornos Linux/Windows, soporte integral y automatización con n8n.
               </p>
 
               <!-- Botones Call to Action -->
-              <div class="d-flex flex-wrap align-items-center gap-3 mb-4 pb-2 pf-hero-cta">
+              <div class="d-flex flex-wrap align-items-center gap-2 gap-sm-3 mb-4 pb-2 pf-hero-cta">
                 <a href="#proyectos" class="pf-btn-primary">
                   Explorar proyectos
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
@@ -114,7 +115,7 @@
               </div>
 
               <!-- Enlaces Rápidos y Contacto Inmediato -->
-              <div class="d-flex flex-wrap align-items-center gap-4 pt-3 border-top" style="borderColor: var(--pf-border); max-width: 520px;">
+              <div class="d-flex flex-wrap align-items-center gap-3 gap-sm-4 pt-3 border-top pf-hero-links" style="border-color: var(--pf-border);">
                 <!-- Descargar CV -->
                 <button type="button" class="pf-social-link" data-download-cv>
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M12 18v-6"/><path d="m9 15 3 3 3-3"/></svg>
@@ -141,15 +142,15 @@
               </div>
             </div>
 
-            <!-- Columna Derecha: Foto de Perfil con Efecto 3D Tilt Interactivo -->
-            <div class="col-12 col-lg-5">
-              <figure class="m-0 mx-auto pf-portrait-figure" style="max-width: 380px;">
+            <!-- Columna Derecha: Foto de Perfil (Responsiva, Siempre Visible al Lado) -->
+            <div class="pf-hero-media">
+              <figure class="m-0 pf-portrait-figure">
                 <div class="pf-portrait-frame">
                   <img src="images/portrait.jpg" alt="Retrato de Robert Pérez" loading="eager">
                 </div>
                 <figcaption class="d-flex align-items-center justify-content-between pt-2 mt-1 pf-mono pf-text-muted" style="font-size: 0.74rem;">
                   <span>Desarrollador de Software</span>
-                  <span>UNETI · Laravel · Python · JS</span>
+                  <span class="d-none d-md-inline">UNETI · Laravel · Python · JS</span>
                 </figcaption>
               </figure>
             </div>

@@ -243,6 +243,39 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   margin-bottom: 1.35rem;
 }
 
+/* ---- Hero Layout Responsivo (La imagen NO baja en ningún dispositivo) ---- */
+.pf-hero-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1.2rem, 3.5vw, 3.5rem);
+  width: 100%;
+}
+
+.pf-hero-content {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.pf-hero-media {
+  flex: 0 0 clamp(130px, 34vw, 380px);
+  width: clamp(130px, 34vw, 380px);
+  max-width: 380px;
+}
+
+.pf-portrait-figure {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.pf-hero-bio {
+  font-size: 1.06rem;
+  max-width: 560px;
+  line-height: 1.68;
+}
+
 .pf-status-pill {
   display: inline-flex;
   align-items: center;
@@ -585,6 +618,18 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   .pf-section  { padding: 3.75rem 0; }
   .pf-form-card{ padding: 1.5rem; }
 
+  /* Hero: Asegura proporción óptima en tablets y laptops */
+  .pf-hero-layout {
+    gap: 1.75rem;
+  }
+  .pf-hero-media {
+    flex: 0 0 clamp(200px, 32vw, 310px);
+    width: clamp(200px, 32vw, 310px);
+  }
+  .pf-hero-title {
+    font-size: clamp(1.85rem, 3.8vw, 2.75rem);
+  }
+
   .pf-skill-tabs-container {
     flex-direction: row !important;
     overflow-x: auto;
@@ -605,6 +650,21 @@ h1, h2, h3, h4, h5, h6, .pf-display {
 }
 
 @media (max-width: 767.98px) {
+  .pf-hero-layout {
+    gap: 1.25rem;
+  }
+  .pf-hero-media {
+    flex: 0 0 clamp(150px, 32vw, 230px);
+    width: clamp(150px, 32vw, 230px);
+  }
+  .pf-hero-title {
+    font-size: clamp(1.45rem, 4.2vw, 2.1rem);
+  }
+  .pf-hero-bio {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
   .pf-filter-bar {
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -624,40 +684,64 @@ h1, h2, h3, h4, h5, h6, .pf-display {
 }
 
 @media (max-width: 575.98px) {
-  .pf-hero { padding: 2.25rem 0 2.75rem; }
+  .pf-hero { padding: 2rem 0 2.5rem; }
+  
+  /* En móviles la imagen NO baja, se mantiene al lado en escala armónica */
+  .pf-hero-layout {
+    gap: 0.85rem;
+    align-items: flex-start;
+  }
+  .pf-hero-media {
+    flex: 0 0 clamp(115px, 34vw, 155px);
+    width: clamp(115px, 34vw, 155px);
+  }
+  .pf-portrait-figure {
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  .pf-portrait-frame {
+    aspect-ratio: 4 / 4.7;
+    border-radius: 14px;
+  }
   .pf-hero-title {
-    font-size: clamp(1.85rem, 8.5vw, 2.45rem);
-    line-height: 1.14;
+    font-size: clamp(1.22rem, 5.2vw, 1.7rem);
+    line-height: 1.15;
     letter-spacing: -0.025em;
-    margin-bottom: 1rem;
+    margin-bottom: 0.65rem;
+  }
+  .pf-hero-bio {
+    font-size: 0.83rem;
+    line-height: 1.5;
+    margin-bottom: 0.9rem !important;
   }
   .pf-status-pill {
-    font-size: 0.73rem;
-    padding: 0.28rem 0.72rem;
-    margin-bottom: 1.1rem;
+    font-size: 0.68rem;
+    padding: 0.22rem 0.6rem;
+    margin-bottom: 0.75rem;
   }
+  
   .pf-hero-cta {
     flex-direction: column;
     width: 100%;
-    gap: 0.65rem !important;
+    gap: 0.5rem !important;
   }
   .pf-hero-cta a,
   .pf-hero-cta .pf-btn-primary,
   .pf-hero-cta .pf-btn-secondary {
     width: 100%;
     justify-content: center;
-    padding: 0.72rem 1.2rem;
-    font-size: 0.92rem;
-    min-height: 44px;
+    padding: 0.58rem 0.9rem;
+    font-size: 0.82rem;
+    min-height: 40px;
   }
-  .pf-portrait-figure {
-    max-width: min(300px, 82vw) !important;
-    margin: 1.25rem auto 0 !important;
+  .pf-hero-links {
+    gap: 0.6rem !important;
+    font-size: 0.78rem;
   }
-  .pf-portrait-frame {
-    aspect-ratio: 4 / 4.6;
-    border-radius: 16px;
+  .pf-hero-links .pf-social-link {
+    font-size: 0.76rem;
   }
+
   .pf-section { padding: 2.75rem 0; }
   .pf-project-body {
     padding: 1.15rem 1.15rem 1.25rem;
