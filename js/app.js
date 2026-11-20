@@ -654,49 +654,16 @@ function handleCopyEmail() {
 
 
 // ============================================================
-//  DOWNLOAD CV
+//  DOWNLOAD CV (PDF)
 // ============================================================
 function downloadProfileCv() {
-  const skillsSummary = SKILL_GROUPS.map(
-    (g) => `${g.title.toUpperCase()}\n${g.skills.map((s) => `  • ${s.name} (${s.level}%)`).join("\n")}`
-  ).join("\n\n");
-
-  const expSummary = EXPERIENCE_TIMELINE.map(
-    (e) => `${e.role} — ${e.organization} (${e.period})\n  ${e.summary}`
-  ).join("\n\n");
-
-  const projSummary = PROJECTS.map(
-    (p) => `${p.index}. ${p.title} [${p.year}] — ${p.stack.join(", ")}\n  ${p.summary}`
-  ).join("\n\n");
-
-  const content = `${PROFILE.name.toUpperCase()}
-${PROFILE.role}
-${PROFILE.location} | ${PROFILE.email}
-============================================================
-
-PERFIL PROFESIONAL
-${PROFILE.bio}
-
-EXPERIENCIA
-${expSummary}
-
-PROYECTOS DESTACADOS
-${projSummary}
-
-HABILIDADES TÉCNICAS
-${skillsSummary}
-`;
-
-  const slug = PROFILE.name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-");
-  const blob = new Blob([content], { type: "text/plain;charset=utf-8;" });
-  const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
-  a.href = url;
-  a.download = `cv-${slug}.txt`;
+  a.href = "CV-Robert-Perez.pdf";
+  a.download = "CV-Robert-Perez.pdf";
+  a.target = "_blank";
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
-  URL.revokeObjectURL(url);
 }
 
 

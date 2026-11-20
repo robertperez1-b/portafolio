@@ -12,7 +12,7 @@ if (fs.existsSync(distDir)) {
 fs.mkdirSync(distDir, { recursive: true });
 
 // Archivos y carpetas a copiar a dist
-const itemsToCopy = ["index.html", "favicon.svg", "css", "js", "images"];
+const itemsToCopy = ["index.html", "favicon.svg", "css", "js", "images", "CV-Robert-Perez.pdf"];
 
 for (const item of itemsToCopy) {
   const src = path.resolve(item);
