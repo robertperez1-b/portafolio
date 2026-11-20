@@ -1,5 +1,9 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
+/* ============================================================
+   Robert Pérez — Portafolio · CSS Custom Styles
+   Stack: HTML + CSS + Bootstrap 5 + JavaScript
+   ============================================================ */
 
+/* ---- CSS Custom Properties (Light Theme) ---- */
 :root {
   --pf-bg: #faf9f6;
   --pf-bg-alt: #f2efe9;
@@ -27,6 +31,7 @@
   --pf-radius-sm: 8px;
 }
 
+/* ---- Dark Theme ---- */
 [data-theme="dark"] {
   --pf-bg: #121211;
   --pf-bg-alt: #1a1a18;
@@ -48,6 +53,7 @@
   --pf-shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.55);
 }
 
+/* ---- Base ---- */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 84px;
@@ -90,13 +96,8 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   font-variant-numeric: tabular-nums;
 }
 
-.pf-text-secondary {
-  color: var(--pf-ink-secondary);
-}
-
-.pf-text-muted {
-  color: var(--pf-ink-muted);
-}
+.pf-text-secondary { color: var(--pf-ink-secondary); }
+.pf-text-muted     { color: var(--pf-ink-muted); }
 
 .pf-eyebrow {
   font-family: var(--pf-font-mono);
@@ -108,6 +109,7 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   display: inline-block;
 }
 
+/* ---- Sections ---- */
 .pf-section {
   padding: 5.5rem 0;
   border-top: 1px solid var(--pf-border);
@@ -117,7 +119,7 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   background-color: var(--pf-bg-alt);
 }
 
-/* Sticky Editorial Navbar */
+/* ---- Sticky Navbar ---- */
 .pf-navbar {
   position: sticky;
   top: 0;
@@ -140,10 +142,7 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   align-items: center;
   gap: 0.5rem;
 }
-
-.pf-brand:hover {
-  color: var(--pf-ink);
-}
+.pf-brand:hover { color: var(--pf-ink); }
 
 .pf-brand-dot {
   width: 8px;
@@ -162,11 +161,7 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   border-radius: 999px;
   transition: color 0.16s ease, background-color 0.16s ease;
 }
-
-.pf-nav-link:hover {
-  color: var(--pf-ink);
-}
-
+.pf-nav-link:hover { color: var(--pf-ink); }
 .pf-nav-link.active {
   color: var(--pf-ink);
   font-weight: 600;
@@ -186,13 +181,12 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   cursor: pointer;
   transition: all 0.16s ease;
 }
-
 .pf-icon-btn:hover {
   border-color: var(--pf-border-strong);
   color: var(--pf-ink);
 }
 
-/* Buttons */
+/* ---- Buttons ---- */
 .pf-btn-primary {
   background-color: var(--pf-ink);
   color: var(--pf-bg);
@@ -208,7 +202,6 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   cursor: pointer;
   transition: transform 0.16s ease, background-color 0.18s ease, border-color 0.18s ease;
 }
-
 .pf-btn-primary:hover {
   background-color: var(--pf-accent);
   border-color: var(--pf-accent);
@@ -231,34 +224,13 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   cursor: pointer;
   transition: all 0.16s ease;
 }
-
 .pf-btn-secondary:hover {
   border-color: var(--pf-ink);
   background-color: var(--pf-surface);
   color: var(--pf-ink);
 }
 
-.pf-btn-guide {
-  background-color: var(--pf-surface);
-  color: var(--pf-ink);
-  border: 1px solid var(--pf-border);
-  border-radius: 999px;
-  padding: 0.38rem 0.85rem;
-  font-size: 0.8rem;
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  cursor: pointer;
-  transition: all 0.16s ease;
-}
-
-.pf-btn-guide:hover {
-  border-color: var(--pf-accent);
-  color: var(--pf-accent);
-}
-
-/* Hero Section */
+/* ---- Hero ---- */
 .pf-hero {
   padding: 4.5rem 0 5.25rem;
 }
@@ -293,6 +265,7 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   box-shadow: 0 0 0 3px var(--pf-success-soft);
 }
 
+/* ---- Portrait 3D Tilt ---- */
 .pf-portrait-frame {
   border-radius: 20px;
   overflow: hidden;
@@ -306,12 +279,10 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   will-change: transform;
   transform-style: preserve-3d;
 }
-
 .pf-portrait-frame:hover {
   border-color: var(--pf-accent);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.16);
 }
-
 .pf-portrait-frame img {
   width: 100%;
   height: 100%;
@@ -321,7 +292,6 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
   pointer-events: none;
 }
-
 .pf-portrait-frame:hover img {
   transform: scale(1.05);
 }
@@ -340,12 +310,9 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   padding: 0;
   cursor: pointer;
 }
+.pf-social-link:hover { color: var(--pf-accent); }
 
-.pf-social-link:hover {
-  color: var(--pf-accent);
-}
-
-/* Filter Pills */
+/* ---- Filter Pills ---- */
 .pf-filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -363,19 +330,17 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   cursor: pointer;
   transition: all 0.16s ease;
 }
-
 .pf-filter-pill:hover {
   border-color: var(--pf-border-strong);
   color: var(--pf-ink);
 }
-
 .pf-filter-pill.active {
   background-color: var(--pf-ink);
   border-color: var(--pf-ink);
   color: var(--pf-bg);
 }
 
-/* Project Cards */
+/* ---- Project Cards ---- */
 .pf-project-card {
   background-color: var(--pf-surface);
   border: 1px solid var(--pf-border);
@@ -387,7 +352,6 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   cursor: pointer;
   transition: border-color 0.2s ease, transform 0.22s ease, box-shadow 0.22s ease;
 }
-
 .pf-project-card:hover {
   border-color: var(--pf-border-strong);
   transform: translateY(-3px);
@@ -401,7 +365,6 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   background-color: var(--pf-bg-alt);
   border-bottom: 1px solid var(--pf-border);
 }
-
 .pf-project-media img {
   width: 100%;
   height: 100%;
@@ -409,7 +372,6 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   display: block;
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
-
 .pf-project-card:hover .pf-project-media img {
   transform: scale(1.035);
 }
@@ -435,7 +397,6 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   flex-shrink: 0;
   transition: all 0.2s ease;
 }
-
 .pf-project-card:hover .pf-project-arrow {
   background-color: var(--pf-accent);
   border-color: var(--pf-accent);
@@ -454,7 +415,7 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   border-radius: 6px;
 }
 
-/* Skills Interactive Tabs & Bars */
+/* ---- Skills Tabs & Bars ---- */
 .pf-skill-tab {
   width: 100%;
   text-align: left;
@@ -466,12 +427,10 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   transition: all 0.16s ease;
   color: var(--pf-ink-secondary);
 }
-
 .pf-skill-tab:hover {
   background-color: var(--pf-surface);
   color: var(--pf-ink);
 }
-
 .pf-skill-tab.active {
   background-color: var(--pf-surface);
   border-color: var(--pf-border);
@@ -492,7 +451,6 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   border-radius: 999px;
   overflow: hidden;
 }
-
 .pf-skill-fill {
   height: 100%;
   background-color: var(--pf-accent);
@@ -500,12 +458,11 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   transition: width 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Timeline / Accordion Rows */
+/* ---- Timeline / Accordion ---- */
 .pf-timeline-item {
   border-bottom: 1px solid var(--pf-border);
   padding: 1.25rem 0;
 }
-
 .pf-timeline-item:first-child {
   padding-top: 0.25rem;
 }
@@ -520,7 +477,26 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   cursor: pointer;
 }
 
-/* Contact Form */
+.pf-timeline-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+  opacity: 0;
+}
+.pf-timeline-content.open {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.pf-chevron-icon {
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+.pf-chevron-icon.open {
+  transform: rotate(180deg);
+}
+
+/* ---- Contact Form ---- */
 .pf-form-card {
   background-color: var(--pf-surface);
   border: 1px solid var(--pf-border);
@@ -545,12 +521,10 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   width: 100%;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
-
 .pf-input::placeholder {
   color: var(--pf-ink-muted);
   opacity: 0.75;
 }
-
 .pf-input:focus {
   outline: none;
   border-color: var(--pf-accent);
@@ -558,12 +532,11 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   background-color: var(--pf-surface);
   color: var(--pf-ink);
 }
-
 .pf-input.is-error {
   border-color: #dc2626;
 }
 
-/* Custom Backdrop & Modal / Drawer */
+/* ---- Modal / Backdrop ---- */
 .pf-backdrop {
   position: fixed;
   inset: 0;
@@ -575,6 +548,9 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   justify-content: center;
   padding: 1.25rem;
   animation: pfFadeIn 0.18s ease;
+}
+.pf-backdrop.hidden {
+  display: none;
 }
 
 .pf-modal-dialog {
@@ -590,86 +566,25 @@ h1, h2, h3, h4, h5, h6, .pf-display {
   animation: pfSlideUp 0.22s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.pf-drawer-backdrop {
-  position: fixed;
-  inset: 0;
-  background-color: rgba(14, 14, 13, 0.55);
-  backdrop-filter: blur(3px);
-  z-index: 1060;
-  display: flex;
-  justify-content: flex-end;
-  animation: pfFadeIn 0.18s ease;
-}
-
-.pf-drawer {
-  background-color: var(--pf-surface);
-  color: var(--pf-ink);
-  border-left: 1px solid var(--pf-border);
-  width: min(680px, 100vw);
-  height: 100vh;
-  overflow-y: auto;
-  box-shadow: var(--pf-shadow-lg);
-  display: flex;
-  flex-direction: column;
-  animation: pfSlideLeft 0.24s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.pf-code-pre {
-  background-color: #141518;
-  color: #e5e7eb;
-  border: 1px solid #272930;
-  border-radius: 10px;
-  padding: 1rem 1.15rem;
-  font-family: var(--pf-font-mono);
-  font-size: 0.76rem;
-  line-height: 1.58;
-  overflow-x: auto;
-  max-height: 360px;
-  margin: 0;
-}
-
-.pf-preset-card {
-  background-color: var(--pf-bg);
-  border: 1px solid var(--pf-border);
-  border-radius: 10px;
-  padding: 0.9rem 1rem;
-  transition: border-color 0.15s ease;
-}
-
-.pf-preset-card.active {
-  border-color: var(--pf-accent);
-  background-color: var(--pf-accent-soft);
-}
-
+/* ---- Animations ---- */
 @keyframes pfFadeIn {
   from { opacity: 0; }
-  to { opacity: 1; }
+  to   { opacity: 1; }
 }
-
 @keyframes pfSlideUp {
   from { opacity: 0; transform: translateY(14px) scale(0.985); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-@keyframes pfSlideLeft {
-  from { opacity: 0; transform: translateX(28px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-/* Responsive Enhancements for Tablets and Mobile Phones */
+/* ============================================================
+   Responsive
+   ============================================================ */
 
 @media (max-width: 991.98px) {
-  .pf-hero {
-    padding: 3rem 0 3.75rem;
-  }
-  .pf-section {
-    padding: 3.75rem 0;
-  }
-  .pf-form-card {
-    padding: 1.5rem;
-  }
-  
-  /* Skills tabs switch from vertical stack to sleek horizontal scrollable tabs on tablets/phones */
+  .pf-hero     { padding: 3rem 0 3.75rem; }
+  .pf-section  { padding: 3.75rem 0; }
+  .pf-form-card{ padding: 1.5rem; }
+
   .pf-skill-tabs-container {
     flex-direction: row !important;
     overflow-x: auto;
@@ -679,22 +594,17 @@ h1, h2, h3, h4, h5, h6, .pf-display {
     -webkit-overflow-scrolling: touch;
     gap: 0.5rem !important;
   }
-  .pf-skill-tabs-container::-webkit-scrollbar {
-    display: none;
-  }
+  .pf-skill-tabs-container::-webkit-scrollbar { display: none; }
   .pf-skill-tab {
     white-space: nowrap;
     flex-shrink: 0;
     width: auto !important;
     padding: 0.65rem 1rem !important;
   }
-  .pf-skill-tab p {
-    display: none;
-  }
+  .pf-skill-tab .pf-skill-caption { display: none; }
 }
 
 @media (max-width: 767.98px) {
-  /* Horizontal scrollable category pill bar on mobile */
   .pf-filter-bar {
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -703,27 +613,18 @@ h1, h2, h3, h4, h5, h6, .pf-display {
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
   }
-  .pf-filter-bar::-webkit-scrollbar {
-    display: none;
-  }
+  .pf-filter-bar::-webkit-scrollbar { display: none; }
   .pf-filter-pill {
     white-space: nowrap;
     flex-shrink: 0;
     font-size: 0.8rem;
     padding: 0.4rem 0.85rem;
   }
-  
-  /* Timeline item mobile spacing */
-  .pf-timeline-item {
-    padding: 1rem 0;
-  }
+  .pf-timeline-item { padding: 1rem 0; }
 }
 
 @media (max-width: 575.98px) {
-  /* Smooth mobile font scaling & padding */
-  .pf-hero {
-    padding: 2.25rem 0 2.75rem;
-  }
+  .pf-hero { padding: 2.25rem 0 2.75rem; }
   .pf-hero-title {
     font-size: clamp(1.85rem, 8.5vw, 2.45rem);
     line-height: 1.14;
@@ -735,24 +636,20 @@ h1, h2, h3, h4, h5, h6, .pf-display {
     padding: 0.28rem 0.72rem;
     margin-bottom: 1.1rem;
   }
-  
-  /* Full-width interactive action buttons in Hero */
   .pf-hero-cta {
     flex-direction: column;
     width: 100%;
     gap: 0.65rem !important;
   }
   .pf-hero-cta a,
-  .pf-btn-primary,
-  .pf-btn-secondary {
+  .pf-hero-cta .pf-btn-primary,
+  .pf-hero-cta .pf-btn-secondary {
     width: 100%;
     justify-content: center;
     padding: 0.72rem 1.2rem;
     font-size: 0.92rem;
     min-height: 44px;
   }
-  
-  /* Mobile portrait image sizing */
   .pf-portrait-figure {
     max-width: min(300px, 82vw) !important;
     margin: 1.25rem auto 0 !important;
@@ -761,32 +658,20 @@ h1, h2, h3, h4, h5, h6, .pf-display {
     aspect-ratio: 4 / 4.6;
     border-radius: 16px;
   }
-  
-  /* Sections padding */
-  .pf-section {
-    padding: 2.75rem 0;
-  }
-  
-  /* Card padding on mobile */
+  .pf-section { padding: 2.75rem 0; }
   .pf-project-body {
     padding: 1.15rem 1.15rem 1.25rem;
     gap: 0.85rem;
   }
-  
-  /* Form card padding & prevention of iOS zoom on inputs */
   .pf-form-card {
     padding: 1.2rem 1.1rem;
     border-radius: 14px;
   }
   .pf-input {
-    font-size: 16px; /* Prevents auto-zoom in mobile Safari / Chrome */
+    font-size: 16px;
     padding: 0.62rem 0.8rem;
   }
-  
-  /* Modal optimization for mobile */
-  .pf-backdrop {
-    padding: 0.5rem;
-  }
+  .pf-backdrop { padding: 0.5rem; }
   .pf-modal-dialog {
     border-radius: 14px;
     max-height: 94vh;
@@ -800,11 +685,7 @@ h1, h2, h3, h4, h5, h6, .pf-display {
     width: 100%;
     justify-content: center;
   }
-  
-  /* Social utility links */
-  .pf-social-link {
-    font-size: 0.8rem;
-  }
+  .pf-social-link { font-size: 0.8rem; }
 }
 
 @media (hover: none) {
